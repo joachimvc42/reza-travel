@@ -129,22 +129,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose <span className="text-gradient">Us</span></h2>
-            <p className="text-gray-600 text-lg">Trusted excellence</p>
+      <section className="py-8 md:py-16 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4">
+          <div className="text-center mb-4 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-1 md:mb-4">Why Choose <span className="text-gradient">Us</span></h2>
+            <p className="text-gray-600 text-sm md:text-lg">Trusted excellence</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-5 gap-1 sm:gap-2 md:gap-4 min-w-0">
             {whyUs.map((item,i)=>{
               const Icon=item.icon;
               return(
-                <div key={i} className="glass p-4 rounded-2xl hover:shadow-glow transition hover:-translate-y-2">
-                  <div className="bg-gradient-primary w-12 h-12 rounded-full flex items-center justify-center mb-3 shadow-lg">
-                    <Icon className="text-white" size={24} />
+                <div key={i} className="glass p-1.5 sm:p-3 md:p-4 rounded-lg md:rounded-2xl hover:shadow-glow transition hover:-translate-y-2 min-w-0 flex flex-col items-center text-center">
+                  <div className="bg-gradient-primary w-7 h-7 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mb-1 sm:mb-2 md:mb-3 shadow-lg flex-shrink-0">
+                    <Icon className="text-white w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   </div>
-                  <h3 className="font-bold text-base mb-1.5">{item.title}</h3>
-                  <p className="text-gray-600 text-xs">{item.desc}</p>
+                  <h3 className="font-bold text-[9px] sm:text-xs md:text-base mb-0.5 md:mb-1.5 leading-tight">{item.title}</h3>
+                  <p className="text-gray-600 text-[8px] sm:text-[10px] md:text-xs hidden sm:block leading-tight">{item.desc}</p>
                 </div>
               );
             })}
